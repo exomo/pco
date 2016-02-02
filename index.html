@@ -1,0 +1,102 @@
+<!doctype html>
+<!-- The Time Machine GitHub pages theme was designed and developed by Jon Rohan, on Feb 7, 2012. -->
+<!-- Follow him for fun. http://twitter.com/jonrohan. Tail his code on https://github.com/jonrohan -->
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <link rel="stylesheet" href="stylesheets/stylesheet.css" media="screen">
+  <link rel="stylesheet" href="stylesheets/github-dark.css">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script type="text/javascript" src="javascripts/script.js"></script>
+
+  <title>Pco</title>
+  <meta name="description" content="PostCreationObjects Library, use pure WinApi more comfortable">
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <header>
+      <h1 class="title">Pco</h1>
+    </header>
+    <div id="container">
+      <p class="tagline">PostCreationObjects Library, use pure WinApi more comfortable</p>
+      <div id="main" role="main">
+        <div class="download-bar">
+        <div class="inner">
+          <a href="https://github.com/exomo/pco/tarball/master" class="download-button tar"><span>Download</span></a>
+          <a href="https://github.com/exomo/pco/zipball/master" class="download-button zip"><span>Download</span></a>
+          <a href="https://github.com/exomo/pco" class="code">View Pco on GitHub</a>
+        </div>
+        <span class="blc"></span><span class="trc"></span>
+        </div>
+        <article class="markdown-body">
+          <h1>
+<a id="pco" class="anchor" href="#pco" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>pco</h1>
+
+<p>PostCreationObjects Library is use pure WinApi more comfortable.</p>
+
+<h2>
+<a id="what-is-it-for" class="anchor" href="#what-is-it-for" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>What is it for</h2>
+
+<p>Hardly anybody wants to use Windows API functions in their code to create and work with window controls. But there might be cases where using a full blown Windowing framework (like Qt) is just too much. What I always hated most when doing "windows" with just the WinAPI was writing the code to interact with the controls. Not only does this mean writing similar code over and over again, but it also is very error prone because you have to take care of buffers for text and you have to remember all those stupid 'WM_...', 'EM_', 'LB_' and whatever constants or look them up all the time. That's why I created this little library. It takes care of some of the common interactions with window controls in a more convenient way. And nothing else.</p>
+
+<h2>
+<a id="how-to-use" class="anchor" href="#how-to-use" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>How to use</h2>
+
+<h3>
+<a id="setting-up-pco" class="anchor" href="#setting-up-pco" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Setting up PCO</h3>
+
+<p>PCO is a single header file. Just include 'PostCreationObjects.hpp' into your source file and you're done.</p>
+
+<h3>
+<a id="ascii-or-unicode" class="anchor" href="#ascii-or-unicode" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>ASCII or Unicode</h3>
+
+<p>The PCO library can be used for whatever encoding your program uses. If 'UNICODE' is defined in you project, the pco classes expect and return std::wstring, else it is just std::string. </p>
+
+<h3>
+<a id="basic-usage" class="anchor" href="#basic-usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Basic usage</h3>
+
+<p>The library provides a class for each of the common control elements. The objects can be created from a window handle and can be casted to window handle implicitly. For most cases you can use an object of one of the PCO classes wherever you would usually use a window handle.</p>
+
+<pre><code>// Obtain a control's handle and assign it to a button object
+pco::Button myButton = GetDlgItem(hwnd, BUTTON_ID);
+</code></pre>
+
+<p>The objects provide control specific methods to interact with the control. For example, all of the controls have a 'GetText()' method (although for some controls the text is never visible).</p>
+
+<pre><code>// Get the text of the button
+std::string text = myButton.getText();
+// Set a new button text
+myButton.setText("Click me");
+</code></pre>
+
+<p>For more example take a look into 'pcotest.cpp'. The pco classes are not documented at the moment, but most of the methods should be pretty self-explaining.</p>
+        </article>
+      </div>
+    </div>
+    <footer>
+      <div class="owner">
+      <p><a href="https://github.com/exomo" class="avatar"><img src="https://avatars1.githubusercontent.com/u/17032006?v=3&amp;s=60" width="48" height="48"></a> <a href="https://github.com/exomo">exomo</a> maintains <a href="https://github.com/exomo/pco">Pco</a></p>
+
+
+      </div>
+      <div class="creds">
+        <small>This page generated using <a href="https://pages.github.com/">GitHub Pages</a><br>theme by <a href="https://twitter.com/jonrohan/">Jon Rohan</a></small>
+      </div>
+    </footer>
+  </div>
+  <div class="current-section">
+    <a href="#top">Scroll to top</a>
+    <a href="https://github.com/exomo/pco/tarball/master" class="tar">tar</a><a href="https://github.com/exomo/pco/zipball/master" class="zip">zip</a><a href="" class="code">source code</a>
+    <p class="name"></p>
+  </div>
+
+  
+</body>
+</html>
