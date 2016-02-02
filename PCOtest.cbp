@@ -29,6 +29,7 @@
 			</Target>
 		</Build>
 		<Compiler>
+			<Add option="-Weffc++" />
 			<Add option="-std=c++11" />
 			<Add option="-Wextra" />
 			<Add option="-Wall" />
@@ -39,10 +40,13 @@
 			<Add library="user32" />
 			<Add library="kernel32" />
 			<Add library="comctl32" />
+			<Add library="uxtheme" />
 		</Linker>
 		<Unit filename="manifest.xml" />
 		<Unit filename="pcotest.cpp" />
-		<Unit filename="pcotest.rc3" />
+		<Unit filename="pcotest.rc">
+			<Option compilerVar="WINDRES" />
+		</Unit>
 		<Extensions>
 			<code_completion />
 			<envvars />

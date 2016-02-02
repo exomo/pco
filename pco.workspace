@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_workspace_file>
-	<Workspace title="Workspace">
-		<Project filename="PCO.cbp" active="1" />
+	<Workspace title="PCO">
+		<Project filename="PCO.cbp" />
+		<Project filename="PCOtest.cbp" />
 	</Workspace>
 </CodeBlocks_workspace_file>
