@@ -1,0 +1,61 @@
+#include <windows.h>
+
+#define VER_FILEVERSION             3,10,347,0
+#define VER_FILEVERSION_STR         "3.10.349.0\0"
+
+#define VER_PRODUCTVERSION          3,10,0,0
+#define VER_PRODUCTVERSION_STR      "3.10\0"
+
+#ifndef DEBUG
+#define VER_DEBUG                   0
+#else
+#define VER_DEBUG                   VS_FF_DEBUG
+#endif
+
+//
+// Manifest resources
+//
+LANGUAGE 0, SUBLANG_NEUTRAL
+1                  RT_MANIFEST    ".\\manifest.xml"
+
+VS_VERSION_INFO VERSIONINFO
+FILEVERSION    	VER_FILEVERSION
+PRODUCTVERSION 	VER_PRODUCTVERSION
+FILEFLAGSMASK  	VS_FFI_FILEFLAGSMASK
+//FILEFLAGS      	(VER_PRIVATEBUILD|VER_PRERELEASE|VER_DEBUG)
+FILEOS         	VOS__WINDOWS32
+FILETYPE       	VFT_DLL
+FILESUBTYPE    	VFT2_UNKNOWN
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040704E4"
+        BEGIN
+            VALUE "CompanyName",      "exomo Software"
+            VALUE "FileDescription",  "Testdatei für PCO"
+            VALUE "FileVersion",      VER_FILEVERSION_STR
+            VALUE "InternalName",     "pcotest"
+//            VALUE "LegalCopyright",   VER_LEGALCOPYRIGHT_STR
+//            VALUE "LegalTrademarks1", VER_LEGALTRADEMARKS1_STR
+//            VALUE "LegalTrademarks2", VER_LEGALTRADEMARKS2_STR
+            VALUE "OriginalFilename", "pcotest.exe"
+            VALUE "ProductName",      "PCO Test"
+            VALUE "ProductVersion",   VER_PRODUCTVERSION_STR
+        END
+    END
+
+    BLOCK "VarFileInfo"
+    BEGIN
+        /* The following line should only be modified for localized versions.     */
+        /* It consists of any number of WORD,WORD pairs, with each pair           */
+        /* describing a language,codepage combination supported by the file.      */
+        /*                                                                        */
+        /* For example, a file might have values "0x409,1252" indicating that it  */
+        /* supports English language (0x409) in the Windows ANSI codepage (1252). */
+
+        VALUE "Translation", 0x407, 1252
+    END
+END
+
+
+

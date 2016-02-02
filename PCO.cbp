@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="PCO" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="library">
+				<Option output="PCO" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+			</Target>
+			<Target title="pcotest">
+				<Option output="bin/pcotest" prefix_auto="1" extension_auto="1" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-DUNICODE" />
+				</Compiler>
+				<Linker>
+					<Add library="comctl32" />
+				</Linker>
+			</Target>
+		</Build>
+		<Unit filename="PostCreationObjects.hpp" />
+		<Unit filename="pcotest.cpp">
+			<Option target="pcotest" />
+		</Unit>
+		<Unit filename="pcotest.rc">
+			<Option compilerVar="WINDRES" />
+			<Option target="pcotest" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
