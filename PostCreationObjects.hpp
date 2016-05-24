@@ -1,5 +1,24 @@
-/*  PostCreationObjects.hpp
+/**************************************************************************
+ *  Copyright 2016 Kai Bublitz (exomo)                                    *
+ *                                                                        *
+ *  This file is part of the PostCreationObjects library (PCO).                                           *
+ *                                                                        *
+ *  PCO is free software: you can redistribute it and/or modify         *
+ *  it under the terms of the GNU General Public License as published by  *
+ *  the Free Software Foundation, either version 3 of the License, or     *
+ *  (at your option) any later version.                                   *
+ *                                                                        *
+ *  PCO is distributed in the hope that it will be useful,              *
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of        *
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         *
+ *  GNU General Public License for more details.                          *
+ *                                                                        *
+ *  You should have received a copy of the GNU General Public License     *
+ *  along with PCO.  If not, see <http://www.gnu.org/licenses/>.        *
+ *                                                                        *
+ **************************************************************************/
 
+/**
     PostCreationObjects are Objects to easily handle window controls
     after they have been created. You can create the window with all
     the controls as usual (e.g. using resource files) and create the
@@ -16,7 +35,8 @@
         - CheckBox
         - ProgressBar
         - SpinEdit
-                                                                        */
+**/
+
 #ifndef __POSTCREATIONOBJECTS_HPP
 #define __POSTCREATIONOBJECTS_HPP
 
@@ -585,7 +605,7 @@ std::basic_string<chartype> TComboBox<chartype>::getItemText(int pos)
 template <typename chartype>
 int TComboBox<chartype>::getSelection()
 {
-    SendMessage(DlgObject<chartype>::hwnd, CB_GETCURSEL, 0,0);
+    return SendMessage(DlgObject<chartype>::hwnd, CB_GETCURSEL, 0,0);
 }
 
 /* implementation of TCheckbox class */
