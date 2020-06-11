@@ -12,18 +12,24 @@
 				<Option type="2" />
 				<Option compiler="gnu_gcc_compiler_posix" />
 				<Compiler>
-					<Add option="-DUNICODE" />
+					<Add option="-std=c++17" />
 				</Compiler>
 				<Linker>
 					<Add library="comctl32" />
 				</Linker>
 			</Target>
 		</Build>
+		<Compiler>
+			<Add option="-std=c++17" />
+		</Compiler>
+		<Linker>
+			<Add library="comctl32" />
+		</Linker>
 		<Unit filename="PostCreationObjects.hpp" />
-		<Extensions>
-			<code_completion />
-			<envvars />
-			<debugger />
-		</Extensions>
+		<Unit filename="application.cpp" />
+		<Unit filename="application.hpp" />
+		<Unit filename="window.cpp" />
+		<Unit filename="window.hpp" />
+		<Extensions />
 	</Project>
 </CodeBlocks_project_file>

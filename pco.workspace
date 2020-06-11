@@ -2,6 +2,8 @@
 <CodeBlocks_workspace_file>
 	<Workspace title="PCO">
 		<Project filename="PCO.cbp" />
-		<Project filename="PCOtest.cbp" />
+		<Project filename="PCOtest.cbp">
+			<Depends filename="PCO.cbp" />
+		</Project>
 	</Workspace>
 </CodeBlocks_workspace_file>
